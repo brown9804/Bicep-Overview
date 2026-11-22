@@ -22,7 +22,7 @@ Read [main.bicep](https://github.com/brown9804/Bicep-Overview/blob/main/examples
 az bicep build --file examples/02-language/main.bicep --stdout
 ```
 
-Expected: resource-group-scoped ARM JSON, an empty resources list, parameter
+Expected: resource-group-scoped ARM JSON, an empty resource collection, parameter
 constraints, and output expressions. Expressions involving parameters are
 evaluated by ARM at deployment time, not printed as final values by compilation.
 

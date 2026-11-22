@@ -52,7 +52,10 @@ connectivity is implied.
 
 CI checks compilation/lint, compiled-template contracts, parameter files,
 documentation synchronization, strict website builds, and internal links.
-It publishes documentation, **not Azure resources**.
+It builds a downloadable documentation artifact, **not Azure resources**.
+Pages publishing is optional and currently disabled because the repository's
+private visibility is unsupported for Pages under the current GitHub plan.
+See [maintenance](maintaining.md) for the activation requirements.
 Live RBAC, policy, quota, APIs, availability, connectivity, and application
 readiness require authorized environment-specific validation.
 

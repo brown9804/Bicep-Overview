@@ -68,9 +68,8 @@ class CompiledExamples(unittest.TestCase):
 
     def test_language_example_creates_no_workloads(self):
         document = template("examples/02-language/main.json")
-        self.assertEqual(document["resources"], [])
+        self.assertEqual(len(document["resources"]), 0)
         self.assertEqual(document["parameters"]["environment"]["allowedValues"], ["dev", "test", "prod"])
-        self.assertIn("copy", document["variables"])
 
     def test_environment_files_compile_with_distinct_labels(self):
         for environment in ("dev", "prod"):

@@ -58,7 +58,15 @@ changes together with examples/tests and official references.
 Python website dependency versions are pinned in `requirements.txt`.
 
 The validation workflow runs on main pushes, pull requests, and manual dispatch.
-Only validated main builds deploy to Pages; configure Pages to use GitHub Actions.
+Every successful build uploads `documentation-site` and `compiled-bicep`
+artifacts. Pages deployment is opt-in through repository Actions variable
+`PAGES_ENABLED=true` and only uses validated main builds.
+
+The repository is currently private, and the current GitHub plan rejected
+Pages configuration. Keep deployment disabled until supported Pages access
+is available or the owner explicitly approves changing repository visibility.
+Then configure Pages to use GitHub Actions, set `PAGES_ENABLED` to `true`, and
+rerun the workflow. Do not make a private repository public without approval.
 No Azure credentials or resource deployment belong in routine CI.
 The compiled artifact uses artificial non-sensitive parameters only; do not
 upload private parameters, real what-if output, or deployment logs.
@@ -73,6 +81,7 @@ The checker uses `/Bicep-Overview/`; page URLs use `.html`.
 
 ## Completion checklist
 
-Require green compiler/tests/strict build/link checks. Verify Pages actually
-deployed and inspect the live catalog, search, diagrams, logo, themes, and
-narrow-screen layout before claiming publication succeeded.
+Require green compiler/tests/strict build/link checks. Inspect the built
+catalog, search, diagrams, logo, themes, and narrow-screen layout.
+When Pages is enabled, verify the deployment and live URL before claiming
+the site was published. A downloadable build is not a live Pages deployment.

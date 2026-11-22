@@ -1,4 +1,4 @@
-name: Validate Bicep and deploy documentation
+name: Validate Bicep and build documentation
 on:
   push:
     branches: [main]
@@ -40,11 +40,16 @@ jobs:
         with:
           name: compiled-bicep
           path: build/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: documentation-site
+          path: site/
       - uses: actions/upload-pages-artifact@v3
+        if: vars.PAGES_ENABLED == 'true'
         with:
           path: site/
   deploy:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    if: vars.PAGES_ENABLED == 'true' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: validate
     runs-on: ubuntu-latest
     permissions:

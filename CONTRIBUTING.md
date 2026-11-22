@@ -26,7 +26,7 @@ rather than copying its entire service catalog.
 Compile/lint affected examples, run the compiled-template tests, check generated
 documentation, and build MkDocs strictly with internal-link checks.
 Commands and test boundaries are in the
-[maintenance guide](https://brown9804.github.io/Bicep-Overview/maintaining.html).
+[maintenance guide](https://github.com/brown9804/Bicep-Overview/blob/main/docs/maintaining.md).
 Routine CI must not authenticate to Azure or deploy paid resources.
 
 ## Pull requests

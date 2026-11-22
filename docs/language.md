@@ -27,7 +27,7 @@ Compile with:
 az bicep build --file examples/02-language/main.bicep --stdout
 ```
 
-Expected JSON contains constraints, expressions, and an empty resources list.
+Expected JSON contains constraints, expressions, and an empty resource collection.
 The compiler checks types; ARM evaluates parameter-dependent results.
 With defaults, evaluation produces dev names and 30.
 

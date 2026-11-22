@@ -13,7 +13,7 @@ Learn the language, resource scopes, dependencies, reusable modules, and safe
 deployment workflow through small original examples before adapting larger
 Azure solutions.
 
-[Read the website](https://brown9804.github.io/Bicep-Overview/) |
+[Website (when Pages is enabled)](https://brown9804.github.io/Bicep-Overview/) |
 [Start learning](docs/getting-started.md) |
 [Example catalog](docs/catalog.md) |
 [Bicep for Everyone](https://github.com/Cloud2BR-MSFTLearningHub/Bicep-For-Everyone)
@@ -23,6 +23,7 @@ Azure solutions.
 
 - [Learning sequence](#learning-sequence)
 - [Companion Bicep library](#companion-bicep-library)
+- [Website publishing status](#website-publishing-status)
 - [Repository structure](#repository-structure)
 - [First compilation](#first-compilation)
 - [Validation and website](#validation-and-website)
@@ -59,6 +60,19 @@ The reference shaped this project's documentation and visual format.
 The examples here are original teaching implementations, not a mirrored
 copy of its catalog. Each repository retains its own license, validation
 history, and limitations. Neither is a production certification.
+
+## Website publishing status
+
+This repository is currently private. GitHub rejected Pages configuration
+because the current plan does not support Pages for this private repository.
+Its visibility has not been changed. Successful validation provides a
+`documentation-site` Actions artifact containing the complete website.
+
+To publish later, first obtain supported Pages access for the private
+repository or explicitly approve a visibility change. Configure Pages to use
+GitHub Actions, set the repository Actions variable `PAGES_ENABLED` to `true`,
+and rerun the workflow. Until then, Pages deployment remains disabled;
+the planned URL above is not a claim of a live site.
 
 ## Repository structure
 
@@ -104,8 +118,9 @@ and the Cloud2BR organization logo/favicon. No generator footer is displayed.
 GitHub Actions installs Bicep, records its version, compiles/lints all five
 entry points and both parameter files, tests security/scope contracts in
 generated ARM JSON, checks synchronized source views, builds strict MkDocs,
-checks local links/assets, and deploys Pages only after successful main
-validation. No Azure login, live validation, what-if, or resource deployment
+checks local links/assets, and uploads the built website. When explicitly
+enabled, Pages deploys only after successful main validation.
+No Azure login, live validation, what-if, or resource deployment
 is part of routine CI.
 
 See [maintenance](docs/maintaining.md) for reproduction commands and test limits.
