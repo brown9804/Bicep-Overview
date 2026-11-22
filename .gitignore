@@ -1,0 +1,10 @@
+site/
+build/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.local.bicepparam
+*.local.parameters.json
+*.whatif.json
+.env

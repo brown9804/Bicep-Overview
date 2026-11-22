@@ -1,0 +1,92 @@
+site_name: Bicep Overview
+site_description: Understand Azure Bicep, scopes, expressions, modules, and safe deployment workflows.
+site_url: https://brown9804.github.io/Bicep-Overview/
+repo_url: https://github.com/brown9804/Bicep-Overview
+repo_name: brown9804/Bicep-Overview
+edit_uri: edit/main/docs/
+use_directory_urls: false
+strict: true
+exclude_docs: |
+  /overrides/
+theme:
+  name: material
+  custom_dir: docs/overrides
+  font: false
+  logo: assets/cloud2br-logo.png
+  favicon: assets/cloud2br-logo.png
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark theme
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light theme
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+plugins:
+  - search
+extra:
+  generator: false
+extra_css:
+  - styles.css
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets:
+      base_path: ["."]
+      check_paths: true
+validation:
+  nav:
+    omitted_files: ignore
+  links:
+    not_found: warn
+    anchors: warn
+nav:
+  - Home:
+      - Welcome: index.md
+      - Learning paths: learning-paths.md
+      - Getting started: getting-started.md
+  - Learn:
+      - Bicep and Infrastructure as Code: fundamentals.md
+      - Parameters and expressions: language.md
+      - Resources and scopes: resources-scopes.md
+      - Modules and dependencies: modules.md
+      - Validate, preview, deploy: deployment.md
+  - Build:
+      - Example catalog: catalog.md
+      - Modular foundation project: project.md
+      - Bicep for Everyone library: companion-library.md
+  - Reference:
+      - Security and costs: security-costs.md
+      - Cheat sheet: cheat-sheet.md
+      - Troubleshooting: troubleshooting.md
+      - Official references: resources.md
+  - Community:
+      - Contributing: contributing.md
+      - Code of conduct: code-of-conduct.md
+      - Maintenance: maintaining.md

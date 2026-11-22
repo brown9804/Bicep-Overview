@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Bicep for Everyone module library
+    url: https://github.com/Cloud2BR-MSFTLearningHub/Bicep-For-Everyone
+    about: Browse broader Azure service modules and projects.

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this learning resource, please cite this repository."
+title: "Bicep Overview"
+type: software
+authors:
+  - name: "Bicep Overview contributors"
+repository-code: "https://github.com/brown9804/Bicep-Overview"
+url: "https://brown9804.github.io/Bicep-Overview/"
+license: GPL-3.0
+abstract: "A practical introduction to Azure Bicep with original examples, typed modules, safe workflows, and educational documentation."

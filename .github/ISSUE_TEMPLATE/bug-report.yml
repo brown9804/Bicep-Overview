@@ -1,0 +1,22 @@
+name: Bug report
+description: Report a reproducible template or documentation problem.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the affected example/page and expected result.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction and versions
+      description: Include Azure CLI/Bicep versions and whether this was offline or live. Remove credentials, identifiers, and personal data.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized output or screenshot
+      description: Do not attach private parameters, deployment outputs, credentials, or environment dumps.
