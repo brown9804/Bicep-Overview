@@ -13,7 +13,7 @@ Learn the language, resource scopes, dependencies, reusable modules, and safe
 deployment workflow through small original examples before adapting larger
 Azure solutions.
 
-[Website (when Pages is enabled)](https://brown9804.github.io/Bicep-Overview/) |
+[Read the website](https://brown9804.github.io/Bicep-Overview/) |
 [Start learning](docs/getting-started.md) |
 [Example catalog](docs/catalog.md) |
 [Bicep for Everyone](https://github.com/Cloud2BR-MSFTLearningHub/Bicep-For-Everyone)
@@ -63,16 +63,13 @@ history, and limitations. Neither is a production certification.
 
 ## Website publishing status
 
-This repository is currently private. GitHub rejected Pages configuration
-because the current plan does not support Pages for this private repository.
-Its visibility has not been changed. Successful validation provides a
-`documentation-site` Actions artifact containing the complete website.
+This repository is public and GitHub Pages is configured to use GitHub Actions.
+The repository Actions variable `PAGES_ENABLED` is set to `true`; validated
+main builds publish to https://brown9804.github.io/Bicep-Overview/.
+Successful validation also provides a `documentation-site` artifact.
 
-To publish later, first obtain supported Pages access for the private
-repository or explicitly approve a visibility change. Configure Pages to use
-GitHub Actions, set the repository Actions variable `PAGES_ENABLED` to `true`,
-and rerun the workflow. Until then, Pages deployment remains disabled;
-the planned URL above is not a claim of a live site.
+Check the workflow's deployment result before claiming a particular update
+is live. Pages publishes documentation only, not Azure resources.
 
 ## Repository structure
 

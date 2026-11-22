@@ -62,11 +62,10 @@ Every successful build uploads `documentation-site` and `compiled-bicep`
 artifacts. Pages deployment is opt-in through repository Actions variable
 `PAGES_ENABLED=true` and only uses validated main builds.
 
-The repository is currently private, and the current GitHub plan rejected
-Pages configuration. Keep deployment disabled until supported Pages access
-is available or the owner explicitly approves changing repository visibility.
-Then configure Pages to use GitHub Actions, set `PAGES_ENABLED` to `true`, and
-rerun the workflow. Do not make a private repository public without approval.
+The repository is public, Pages uses GitHub Actions, and `PAGES_ENABLED`
+is set to `true`. Main pushes automatically publish after successful validation;
+manual workflow dispatch can republish the current main build.
+To pause publication, set `PAGES_ENABLED` to `false` without disabling validation.
 No Azure credentials or resource deployment belong in routine CI.
 The compiled artifact uses artificial non-sensitive parameters only; do not
 upload private parameters, real what-if output, or deployment logs.
